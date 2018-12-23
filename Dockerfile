@@ -40,7 +40,8 @@ RUN volt get sheerun/vim-polyglot \
 	rstacruz/vim-closer \
 	tpope/vim-endwise \
 	itchyny/lightline.vim \
-  tpope/vim-commentary
+  tpope/vim-commentary \
+  MikeDacre/tmux-zsh-vim-titles
 
 RUN mkdir -p $HOME/.vim/colors
 RUN chown $USERNAME $HOME/.vim/colors
