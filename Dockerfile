@@ -10,8 +10,6 @@ RUN apk -U add --no-cache --virtual .build-deps build-base && \
     cd fzy && make && make install && \
     apk del .build-deps
 
-RUN apk add the_silver_searcher
-
 RUN addgroup -g 1000 -S dev && \
     adduser -u 1000 -S $USERNAME -G dev
 
@@ -24,39 +22,38 @@ SHELL ["/bin/zsh", "-c"]
 COPY zshrc $HOME/.zshrc
 RUN curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
-COPY --chown=steven:dev /volt/ $HOME/volt/
-ENV VOLTPATH $HOME/volt
+COPY --chown=steven:dev /volt/ $HOME/.volt
+ENV VOLTPATH $HOME/.volt
 RUN go get github.com/vim-volt/volt
 
-RUN volt get sheerun/vim-polyglot \
-	tpope/vim-sensible \
-  mhinz/vim-signify \
-	justinmk/vim-dirvish \
-	kristijanhusak/vim-dirvish-git \
-	danishprakash/vim-githubinator \
-	terryma/vim-multiple-cursors \
-	editorconfig/editorconfig-vim \
-	junegunn/vim-easy-align \
-	rstacruz/vim-closer \
-	tpope/vim-endwise \
-	itchyny/lightline.vim \
-  tpope/vim-commentary \
-  MikeDacre/tmux-zsh-vim-titles
-
-RUN mkdir -p $HOME/.vim/colors
-RUN chown $USERNAME $HOME/.vim/colors
-WORKDIR $HOME/.vim/colors
-RUN curl -O https://raw.githubusercontent.com/sonph/onehalf/master/vim/colors/onehalfdark.vim
-
-RUN mkdir -p $HOME/.vim/autoload/lightline/colorscheme
-RUN chown $USERNAME $HOME/.vim/autoload/lightline/colorscheme
-WORKDIR $HOME/.vim/autoload/lightline/colorscheme
-RUN curl -O https://raw.githubusercontent.com/sonph/onehalf/master/vim/autoload/lightline/colorscheme/onehalfdark.vim
+RUN volt get \
+      danishprakash/vim-githubinator \
+      editorconfig/editorconfig-vim \
+      inside/vim-search-pulse \
+      itchyny/lightline.vim \
+      junegunn/vim-easy-align \
+      justinmk/vim-dirvish \
+      kristijanhusak/vim-dirvish-git \
+      luochen1990/rainbow \
+      mhinz/vim-signify \
+      mikedacre/tmux-zsh-vim-titles \
+      rrethy/vim-illuminate \
+      rstacruz/vim-closer \
+      sheerun/vim-polyglot \
+      terryma/vim-multiple-cursors \
+      terryma/vim-smooth-scroll \
+      tpope/vim-commentary \
+      tpope/vim-endwise \
+      tpope/vim-sensible
 
 # TMUX
 
 COPY tmux.conf $HOME/.tmux.conf
-RUN git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+RUN git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm/
+
+# FONT
+
+COPY mplus_1mn_nerd_font_complete.ttf /usr/share/fonts/
 
 WORKDIR $HOME
 
