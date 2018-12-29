@@ -2,8 +2,11 @@ FROM golang:alpine
 
 RUN apk -U add vim git openssl curl tmux zsh bash ncurses perl build-base
 
+RUN apk add zsh-vcs the_silver_searcher
+
 ENV USERNAME steven
 ENV HOME /home/$USERNAME
+ENV TERM screen-256color
 
 RUN apk -U add --no-cache --virtual .build-deps build-base && \
     git clone https://github.com/jhawthorn/fzy && \
@@ -31,6 +34,7 @@ RUN volt get \
       editorconfig/editorconfig-vim \
       inside/vim-search-pulse \
       itchyny/lightline.vim \
+      jeffkreeftmeijer/vim-numbertoggle \
       junegunn/vim-easy-align \
       justinmk/vim-dirvish \
       kristijanhusak/vim-dirvish-git \

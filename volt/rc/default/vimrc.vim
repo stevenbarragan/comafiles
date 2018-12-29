@@ -13,7 +13,6 @@ set visualbell
 " set wildmenu            " visual autocomplete for command menu"
 set lazyredraw          " redraw only when we need to."
 set showmatch           " highlight matching [{()}]}]"
-" set guifont=mplus\ Nerd\ Font
 
 set noshowmode
 
