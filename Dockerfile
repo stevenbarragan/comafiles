@@ -1,6 +1,6 @@
 FROM golang:alpine
 
-RUN apk -U add vim git openssl curl tmux zsh bash ncurses perl build-base
+RUN apk -U add vim git openssl curl tmux zsh bash ncurses perl build-base procps
 RUN apk add fzy --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
 
 RUN apk add zsh-vcs the_silver_searcher
@@ -12,6 +12,7 @@ ENV USERNAME steven
 ENV HOME /home/$USERNAME
 ENV TERM screen-256color
 ENV ZPLUG_HOME $HOME/.zplug
+ENV TMUX_PLUGIN_MANAGER_PATH $HOME/plugins/tpm/tpm
 
 RUN addgroup -g 1000 -S dev && \
     adduser -u 1000 -S $USERNAME -G dev
@@ -29,10 +30,12 @@ COPY --chown=steven:dev /volt/ $HOME/.volt
 ENV VOLTPATH $HOME/.volt
 
 RUN volt get \
+      christoomey/vim-tmux-navigator \
       danishprakash/vim-githubinator \
       editorconfig/editorconfig-vim \
       inside/vim-search-pulse \
       itchyny/lightline.vim \
+      jeffkreeftmeijer/vim-dim \
       jeffkreeftmeijer/vim-numbertoggle \
       junegunn/vim-easy-align \
       justinmk/vim-dirvish \
@@ -47,13 +50,11 @@ RUN volt get \
       terryma/vim-smooth-scroll \
       tpope/vim-commentary \
       tpope/vim-endwise \
-      tpope/vim-sensible \
-      jeffkreeftmeijer/vim-dim
+      tpope/vim-sensible
 
 # TMUX
 
 COPY tmux.conf $HOME/.tmux.conf
-RUN git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm/
 
 # FONT
 
