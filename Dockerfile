@@ -4,9 +4,13 @@ RUN apk -U add vim git openssl curl tmux zsh bash ncurses perl build-base
 
 RUN apk add zsh-vcs the_silver_searcher
 
+RUN go get github.com/vim-volt/volt
+
+ENV LANG en_US.UTF-8
 ENV USERNAME steven
 ENV HOME /home/$USERNAME
 ENV TERM screen-256color
+ENV ZPLUG_HOME $HOME/.zplug
 
 RUN apk -U add --no-cache --virtual .build-deps build-base && \
     git clone https://github.com/jhawthorn/fzy && \
@@ -20,14 +24,14 @@ USER $USERNAME
 WORKDIR $HOME
 
 # ZSH
-SHELL ["/bin/zsh", "-c"]
 
 COPY zshrc $HOME/.zshrc
-RUN curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+SHELL ["/bin/zsh", "-c"]
 
 COPY --chown=steven:dev /volt/ $HOME/.volt
 ENV VOLTPATH $HOME/.volt
-RUN go get github.com/vim-volt/volt
+
+RUN git clone https://github.com/zplug/zplug $ZPLUG_HOME
 
 RUN volt get \
       danishprakash/vim-githubinator \
@@ -48,7 +52,8 @@ RUN volt get \
       terryma/vim-smooth-scroll \
       tpope/vim-commentary \
       tpope/vim-endwise \
-      tpope/vim-sensible
+      tpope/vim-sensible \
+      jeffkreeftmeijer/vim-dim
 
 # TMUX
 
