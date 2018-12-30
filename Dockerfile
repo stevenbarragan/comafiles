@@ -1,6 +1,7 @@
 FROM golang:alpine
 
 RUN apk -U add vim git openssl curl tmux zsh bash ncurses perl build-base
+RUN apk add fzy --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
 
 RUN apk add zsh-vcs the_silver_searcher
 
@@ -11,11 +12,6 @@ ENV USERNAME steven
 ENV HOME /home/$USERNAME
 ENV TERM screen-256color
 ENV ZPLUG_HOME $HOME/.zplug
-
-RUN apk -U add --no-cache --virtual .build-deps build-base && \
-    git clone https://github.com/jhawthorn/fzy && \
-    cd fzy && make && make install && \
-    apk del .build-deps
 
 RUN addgroup -g 1000 -S dev && \
     adduser -u 1000 -S $USERNAME -G dev
