@@ -20,14 +20,13 @@ USER $USERNAME
 WORKDIR $HOME
 
 # ZSH
-
 COPY zshrc $HOME/.zshrc
+RUN git clone https://github.com/zplug/zplug $ZPLUG_HOME
+COPY packages.zsh $ZPLUG_HOME/packages.zsh
 SHELL ["/bin/zsh", "-c"]
 
 COPY --chown=steven:dev /volt/ $HOME/.volt
 ENV VOLTPATH $HOME/.volt
-
-RUN git clone https://github.com/zplug/zplug $ZPLUG_HOME
 
 RUN volt get \
       danishprakash/vim-githubinator \
