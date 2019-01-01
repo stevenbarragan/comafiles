@@ -1,22 +1,30 @@
-source '/Users/steven/.zplugin/bin/zplugin.zsh'
+source "${HOME}/.zplugin/bin/zplugin.zsh"
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
+# https://github.com/sindresorhus/pure/issues/39#issuecomment-386371357
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export TERM="${TERM:-"xterm-256color"}"
+
 export VOLTPATH="${HOME}/.config/volt"
 
-zplugin ice from"gh-r" as"program"
-zplugin light talal/mimir
+bindkey "^?" backward-delete-char # https://github.com/denysdovhan/spaceship-prompt/issues/91#issuecomment-327996599
 
-zplugin ice from"gh-r" as"program" mv"*volt* -> volt" atclone"volt get -l"
-zplugin light vim-volt/volt
+zplugin ice from"gh-r" as"program"
+zplugin load "talal/mimir"
+
+zplugin ice from"gh-r" as"program" mv"*volt* -> volt" atclone"echo 'Installing vim plugins' && volt get -l"
+zplugin load "vim-volt/volt"
 
 zplugin light "b4b4r07/enhancd"
+zplugin light "mikedacre/tmux-zsh-vim-titles"
+zplugin light "zdharma/fast-syntax-highlighting"
 
 # mimir prompt https://github.com/talal/mimir#zsh
 autoload -Uz add-zsh-hook
 prompt_mimir_cmd() { mimir }
 add-zsh-hook precmd prompt_mimir_cmd
-
 prompt_symbol="❯"
 PROMPT="%(?.%F{magenta}.%F{red})${prompt_symbol}%f "
 
