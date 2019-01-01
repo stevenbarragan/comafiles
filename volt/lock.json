@@ -1,0 +1,139 @@
+{
+  "version": 2,
+  "current_profile_name": "default",
+  "repos": [
+    {
+      "type": "git",
+      "path": "github.com/terryma/vim-smooth-scroll",
+      "version": "0eae2367c70c3415b97869346af1b5e30c123dff"
+    },
+    {
+      "type": "git",
+      "path": "github.com/jeffkreeftmeijer/vim-dim",
+      "version": "00d1b3beacf22cf061b95261d7afbba461701826"
+    },
+    {
+      "type": "git",
+      "path": "github.com/danishprakash/vim-githubinator",
+      "version": "da9a32746b6ff0918dbbc3544e0b535487f94178"
+    },
+    {
+      "type": "git",
+      "path": "github.com/kristijanhusak/vim-dirvish-git",
+      "version": "423bbb5e532fe0f14677d18e6dff05c91c4ad2e0"
+    },
+    {
+      "type": "git",
+      "path": "github.com/rrethy/vim-illuminate",
+      "version": "7ca9b415f02545278d623c0de535226e80a79e38"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tpope/vim-endwise",
+      "version": "f67d022169bd04d3c000f47b1c03bfcbc4209470"
+    },
+    {
+      "type": "git",
+      "path": "github.com/jeffkreeftmeijer/vim-numbertoggle",
+      "version": "cfaecb9e22b45373bb4940010ce63a89073f6d8b"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tpope/vim-commentary",
+      "version": "141d9d32a9fb58fe474fcc89cd7221eb2dd57b3a"
+    },
+    {
+      "type": "git",
+      "path": "github.com/inside/vim-search-pulse",
+      "version": "9f8f473e3813bd76ecb66e8d6182d96bda39b6df"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tpope/vim-sensible",
+      "version": "7f46e82fc7e343be84df6c06bec63dd6494b6712"
+    },
+    {
+      "type": "git",
+      "path": "github.com/rstacruz/vim-closer",
+      "version": "af972158d308d31ddc5e7dc08ccde6d53a0ce727"
+    },
+    {
+      "type": "git",
+      "path": "github.com/christoomey/vim-tmux-navigator",
+      "version": "9f7d1588b04644d8a1671d2325fefbb4f772e466"
+    },
+    {
+      "type": "git",
+      "path": "github.com/justinmk/vim-dirvish",
+      "version": "d33796c460229b2cf0dd09fedf1b272da9d13a42"
+    },
+    {
+      "type": "git",
+      "path": "github.com/junegunn/vim-easy-align",
+      "version": "1cd724dc239c3a0f7a12e0fac85945cc3dbe07b0"
+    },
+    {
+      "type": "git",
+      "path": "github.com/luochen1990/rainbow",
+      "version": "d7bb89e6a6fae25765ee16020ea7a85d43bd6e41"
+    },
+    {
+      "type": "git",
+      "path": "github.com/mikedacre/tmux-zsh-vim-titles",
+      "version": "ed54bfece592de5e976cf54d556c947d5b2b8aaa"
+    },
+    {
+      "type": "git",
+      "path": "github.com/mhinz/vim-signify",
+      "version": "14f7fda00013a11213c767f82f5f03a2e735ba06"
+    },
+    {
+      "type": "git",
+      "path": "github.com/itchyny/lightline.vim",
+      "version": "1ef44bfa50320347004be77f836e97dc4f54982e"
+    },
+    {
+      "type": "git",
+      "path": "github.com/terryma/vim-multiple-cursors",
+      "version": "f4fd6ad4e4075dd14d208af059063f1f3cfb7d55"
+    },
+    {
+      "type": "git",
+      "path": "github.com/editorconfig/editorconfig-vim",
+      "version": "68f8136d2b018bfa9b23403e87d3d65bc942cbc3"
+    },
+    {
+      "type": "git",
+      "path": "github.com/sheerun/vim-polyglot",
+      "version": "c161994e9607399a7b365ab274592bfc4f100306"
+    }
+  ],
+  "profiles": [
+    {
+      "name": "default",
+      "repos_path": [
+        "github.com/terryma/vim-smooth-scroll",
+        "github.com/jeffkreeftmeijer/vim-dim",
+        "github.com/danishprakash/vim-githubinator",
+        "github.com/kristijanhusak/vim-dirvish-git",
+        "github.com/rrethy/vim-illuminate",
+        "github.com/tpope/vim-endwise",
+        "github.com/jeffkreeftmeijer/vim-numbertoggle",
+        "github.com/tpope/vim-commentary",
+        "github.com/inside/vim-search-pulse",
+        "github.com/tpope/vim-sensible",
+        "github.com/rstacruz/vim-closer",
+        "github.com/christoomey/vim-tmux-navigator",
+        "github.com/justinmk/vim-dirvish",
+        "github.com/junegunn/vim-easy-align",
+        "github.com/luochen1990/rainbow",
+        "github.com/mikedacre/tmux-zsh-vim-titles",
+        "github.com/mhinz/vim-signify",
+        "github.com/itchyny/lightline.vim",
+        "github.com/terryma/vim-multiple-cursors",
+        "github.com/editorconfig/editorconfig-vim",
+        "github.com/sheerun/vim-polyglot"
+      ]
+    }
+  ]
+}
