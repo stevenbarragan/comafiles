@@ -84,11 +84,6 @@
     },
     {
       "type": "git",
-      "path": "github.com/mhinz/vim-signify",
-      "version": "14f7fda00013a11213c767f82f5f03a2e735ba06"
-    },
-    {
-      "type": "git",
       "path": "github.com/itchyny/lightline.vim",
       "version": "1ef44bfa50320347004be77f836e97dc4f54982e"
     },
@@ -106,6 +101,21 @@
       "type": "git",
       "path": "github.com/sheerun/vim-polyglot",
       "version": "c161994e9607399a7b365ab274592bfc4f100306"
+    },
+    {
+      "type": "git",
+      "path": "github.com/zhaocai/GoldenView.Vim",
+      "version": "ac0ee3014caa36c52e8352d11c308b27a159113c"
+    },
+    {
+      "type": "git",
+      "path": "github.com/ayu-theme/ayu-vim",
+      "version": "4c418ff99fe898121643bf60cc0d9752c31c2937"
+    },
+    {
+      "type": "git",
+      "path": "github.com/mhinz/vim-signify",
+      "version": "14f7fda00013a11213c767f82f5f03a2e735ba06"
     }
   ],
   "profiles": [
@@ -128,11 +138,13 @@
         "github.com/junegunn/vim-easy-align",
         "github.com/luochen1990/rainbow",
         "github.com/mikedacre/tmux-zsh-vim-titles",
-        "github.com/mhinz/vim-signify",
         "github.com/itchyny/lightline.vim",
         "github.com/terryma/vim-multiple-cursors",
         "github.com/editorconfig/editorconfig-vim",
-        "github.com/sheerun/vim-polyglot"
+        "github.com/sheerun/vim-polyglot",
+        "github.com/zhaocai/GoldenView.Vim",
+        "github.com/ayu-theme/ayu-vim",
+        "github.com/mhinz/vim-signify"
       ]
     }
   ]

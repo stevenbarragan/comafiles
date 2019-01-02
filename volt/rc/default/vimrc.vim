@@ -4,7 +4,8 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 syntax enable
 
-color dim
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
 
 " ================ General Config ====================
 
