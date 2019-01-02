@@ -1,0 +1,12 @@
+[branch]
+  autosetupmerge = always
+  autosetuprebase = always
+[commit]
+  verbose = true
+[core]
+  autocrlf = false
+[merge]
+  summary = true
+  verbosity = 2
+[rerere]
+  enabled = true
