@@ -10,13 +10,10 @@ color dim
 
 set relativenumber
 set number
-set visualbell
-
-" set wildmenu            " visual autocomplete for command menu"
 set lazyredraw          " redraw only when we need to."
 set showmatch           " highlight matching [{()}]}]"
-
 set noshowmode
+set nowrap
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -33,6 +30,19 @@ set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
 set foldenable          " enable folding"
+
+" ================ Turn Off Swap Files ==============
+
+set noswapfile
+set nobackup
+set nowb
+
+" Create window splits easier
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> ss <C-w>s
+
+"Clear current search highlight by double tapping //
+nmap <silent> // :nohlsearch<CR>
 
 " https://github.com/junegunn/vim-easy-align#quick-start-guide
 " Start interactive EasyAlign in visual mode (e.g. vipga)

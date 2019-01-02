@@ -6,7 +6,6 @@ autoload -Uz _zplugin
 export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 export TERM="${TERM:-"xterm-256color"}"
-
 export VOLTPATH="${HOME}/.config/volt"
 
 bindkey "^?" backward-delete-char # https://github.com/denysdovhan/spaceship-prompt/issues/91#issuecomment-327996599
@@ -29,3 +28,5 @@ prompt_symbol="❯"
 PROMPT="%(?.%F{magenta}.%F{red})${prompt_symbol}%f "
 
 set -o vi
+export EDITOR=vim
+export VISUAL=vim
