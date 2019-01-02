@@ -14,7 +14,7 @@ bindkey "^?" backward-delete-char # https://github.com/denysdovhan/spaceship-pro
 zplugin ice from"gh-r" as"program"
 zplugin load "talal/mimir"
 
-zplugin ice from"gh-r" as"program" mv"*volt* -> volt" atclone"echo 'Installing vim plugins' && volt get -l"
+zplugin ice from"gh-r" as"program" mv"*volt* -> volt" atclone".volt get -l"
 zplugin load "vim-volt/volt"
 
 zplugin light "b4b4r07/enhancd"
