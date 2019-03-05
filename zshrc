@@ -20,6 +20,10 @@ zplugin light "b4b4r07/enhancd"
 zplugin light "mikedacre/tmux-zsh-vim-titles"
 zplugin light "zdharma/fast-syntax-highlighting"
 
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+zplugin light "zsh-users/zsh-autosuggestions"
+bindkey '^ ' autosuggest-accept
+
 # mimir prompt https://github.com/talal/mimir#zsh
 autoload -Uz add-zsh-hook
 prompt_mimir_cmd() { mimir }
