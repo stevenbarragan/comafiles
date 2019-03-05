@@ -19,11 +19,6 @@
     },
     {
       "type": "git",
-      "path": "github.com/kristijanhusak/vim-dirvish-git",
-      "version": "423bbb5e532fe0f14677d18e6dff05c91c4ad2e0"
-    },
-    {
-      "type": "git",
       "path": "github.com/rrethy/vim-illuminate",
       "version": "7ca9b415f02545278d623c0de535226e80a79e38"
     },
@@ -61,11 +56,6 @@
       "type": "git",
       "path": "github.com/christoomey/vim-tmux-navigator",
       "version": "9f7d1588b04644d8a1671d2325fefbb4f772e466"
-    },
-    {
-      "type": "git",
-      "path": "github.com/justinmk/vim-dirvish",
-      "version": "d33796c460229b2cf0dd09fedf1b272da9d13a42"
     },
     {
       "type": "git",
@@ -116,6 +106,16 @@
       "type": "git",
       "path": "github.com/mhinz/vim-signify",
       "version": "14f7fda00013a11213c767f82f5f03a2e735ba06"
+    },
+    {
+      "type": "git",
+      "path": "github.com/pbrisbin/vim-colors-off",
+      "version": "bdb471e8a3823648e983d015ce68df456dcd2b99"
+    },
+    {
+      "type": "git",
+      "path": "github.com/machakann/vim-highlightedyank",
+      "version": "51e25c9fa3bd2dca500ee0c910a45641d57a57fa"
     }
   ],
   "profiles": [
@@ -125,7 +125,6 @@
         "github.com/terryma/vim-smooth-scroll",
         "github.com/jeffkreeftmeijer/vim-dim",
         "github.com/danishprakash/vim-githubinator",
-        "github.com/kristijanhusak/vim-dirvish-git",
         "github.com/rrethy/vim-illuminate",
         "github.com/tpope/vim-endwise",
         "github.com/jeffkreeftmeijer/vim-numbertoggle",
@@ -134,7 +133,6 @@
         "github.com/tpope/vim-sensible",
         "github.com/rstacruz/vim-closer",
         "github.com/christoomey/vim-tmux-navigator",
-        "github.com/justinmk/vim-dirvish",
         "github.com/junegunn/vim-easy-align",
         "github.com/luochen1990/rainbow",
         "github.com/mikedacre/tmux-zsh-vim-titles",
@@ -144,7 +142,9 @@
         "github.com/sheerun/vim-polyglot",
         "github.com/zhaocai/GoldenView.Vim",
         "github.com/ayu-theme/ayu-vim",
-        "github.com/mhinz/vim-signify"
+        "github.com/mhinz/vim-signify",
+        "github.com/pbrisbin/vim-colors-off",
+        "github.com/machakann/vim-highlightedyank"
       ]
     }
   ]
