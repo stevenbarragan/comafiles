@@ -3,13 +3,12 @@
 function! s:on_load_pre()
   " Plugin configuration like the code written in vimrc.
   " This configuration is executed *before* a plugin is loaded.
+  let g:rainbow_active = 1
 endfunction
 
 function! s:on_load_post()
   " Plugin configuration like the code written in vimrc.
   " This configuration is executed *after* a plugin is loaded.
-
-  let g:rainbow_active = 1
 endfunction
 
 function! s:loaded_on()
