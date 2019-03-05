@@ -1,7 +1,3 @@
-source "${HOME}/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-
 # https://github.com/sindresorhus/pure/issues/39#issuecomment-386371357
 export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"

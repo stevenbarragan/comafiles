@@ -1,0 +1,15 @@
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+
+if ! grep -q "${PWD}" "${HOME}/.zshrc"; then
+    echo "source ${PWD}/zshrc\n" >> "${HOME}/.zshrc"
+fi
+
+mkdir -p "${HOME}/.config/git"
+
+ln -sF "${PWD}/gitconfig" "${HOME}/.config/git/config"
+ln -sF "${PWD}/tmux.conf" "${HOME}/.tmux.conf"
+ln -sF "${PWD}/volt" "${HOME}/.config/volt"
+
+# source "${HOME}/.zshrc"
+# zplg update --all
+# volt get -l -u
