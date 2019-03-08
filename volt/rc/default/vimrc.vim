@@ -76,3 +76,5 @@ endfunction
 nnoremap <leader>e :call FzyCommand("ag . --silent -l -g ''", ":e")<cr>
 nnoremap <leader>v :call FzyCommand("ag . --silent -l -g ''", ":vs")<cr>
 nnoremap <leader>s :call FzyCommand("ag . --silent -l -g ''", ":sp")<cr>
+
+set timeoutlen=1000 ttimeoutlen=0  " Eliminating delays on ESC
