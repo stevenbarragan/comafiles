@@ -34,3 +34,8 @@ export VISUAL=vim
 
 autoload -U compinit # Enable command completion
 compinit
+
+# enable colored output from ls, etc. on FreeBSD-based systems
+autoload -U colors
+colors
+export CLICOLOR=1
