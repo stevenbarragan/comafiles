@@ -31,3 +31,6 @@ PROMPT="%(?.%F{magenta}.%F{red})${prompt_symbol}%f "
 set -o vi
 export EDITOR=vim
 export VISUAL=vim
+
+autoload -U compinit # Enable command completion
+compinit
