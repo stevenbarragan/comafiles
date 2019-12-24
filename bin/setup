@@ -14,6 +14,9 @@ ln -sF "${PWD}/volt/lock.json" "${HOME}/.config/volt/lock.json"
 ln -sF "${PWD}/volt/plugconf/" "${HOME}/.config/volt/plugconf"
 ln -sF "${PWD}/volt/rc/" "${HOME}/.config/volt/rc"
 
+mkdir -p "${HOME}/.config/alacritty/"
+ln -sF "${PWD}/alacritty.yml" "${HOME}/.config/alacritty/alacritty.yml"
+
 # source "${HOME}/.zshrc"
 # zplg update --all
 # volt get -l -u
