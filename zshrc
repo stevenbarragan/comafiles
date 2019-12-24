@@ -9,12 +9,6 @@ export KEYTIMEOUT=1          # By default, there is a 0.4 second delay after you
 
 bindkey "^?" backward-delete-char # https://github.com/denysdovhan/spaceship-prompt/issues/91#issuecomment-327996599
 
-zplugin ice from"gh-r" as"program"
-
-zplugin ice from"gh-r" as"program" mv"*volt* -> volt" atclone".volt get -l"
-zplugin load "vim-volt/volt"
-
-zplugin light "b4b4r07/enhancd"
 zplugin light "mikedacre/tmux-zsh-vim-titles"
 zplugin light "zdharma/fast-syntax-highlighting"
 
