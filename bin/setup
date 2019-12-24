@@ -8,7 +8,11 @@ mkdir -p "${HOME}/.config/git"
 
 ln -sF "${PWD}/gitconfig" "${HOME}/.config/git/config"
 ln -sF "${PWD}/tmux.conf" "${HOME}/.tmux.conf"
-ln -sF "${PWD}/volt" "${HOME}/.config/volt"
+
+mkdir -p "${HOME}/.config/volt/repos"
+ln -sF "${PWD}/volt/lock.json" "${HOME}/.config/volt/lock.json"
+ln -sF "${PWD}/volt/plugconf/" "${HOME}/.config/volt/plugconf"
+ln -sF "${PWD}/volt/rc/" "${HOME}/.config/volt/rc"
 
 # source "${HOME}/.zshrc"
 # zplg update --all
