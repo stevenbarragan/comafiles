@@ -32,3 +32,5 @@ setopt appendhistory         # sessions will append their history list to the hi
 zplugin light "zsh-users/zsh-history-substring-search"
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
+fpath=(/usr/local/share/zsh-completions $fpath)

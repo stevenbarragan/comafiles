@@ -1,7 +1,7 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 
 if ! grep -q "${PWD}" "${HOME}/.zshrc"; then
-    echo "source ${PWD}/zshrc\n" >> "${HOME}/.zshrc"
+    echo "\nsource ${PWD}/zshrc\n" >> "${HOME}/.zshrc"
 fi
 
 mkdir -p "${HOME}/.config/git"
