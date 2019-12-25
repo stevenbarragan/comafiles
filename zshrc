@@ -32,10 +32,3 @@ setopt appendhistory         # sessions will append their history list to the hi
 zplugin light "zsh-users/zsh-history-substring-search"
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
-
-autoload -Uz compinit        # https://gist.github.com/ctechols/ca1035271ad134841284
-if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
-  compinit;
-else
-  compinit -C;
-fi;
