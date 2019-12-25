@@ -17,6 +17,8 @@ ln -sF "${PWD}/volt/rc/" "${HOME}/.config/volt/rc"
 mkdir -p "${HOME}/.config/alacritty/"
 ln -sF "${PWD}/alacritty.yml" "${HOME}/.config/alacritty/alacritty.yml"
 
+ln -sF "${PWD}/starship.toml" "${HOME}/.config/starship.toml"
+
 # source "${HOME}/.zshrc"
 # zplg update --all
 # volt get -l -u
