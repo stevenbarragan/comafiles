@@ -6,6 +6,7 @@ export LC_CTYPE="en_US.UTF-8"
 export TERM="${TERM:-"xterm-256color"}"
 export VOLTPATH="${HOME}/.config/volt"
 export KEYTIMEOUT=1          # By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered
+export PATH=${HOME}/go/bin:$PATH
 
 bindkey "^?" backward-delete-char # https://github.com/denysdovhan/spaceship-prompt/issues/91#issuecomment-327996599
 
