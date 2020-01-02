@@ -1,6 +1,3 @@
-[branch]
-	autosetupmerge = always
-	autosetuprebase = always
 [commit]
 	verbose = true
 [core]
