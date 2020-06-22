@@ -1,4 +1,6 @@
 set termguicolors
+set encoding=UTF-8
+
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
@@ -52,15 +54,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" allows cursor change in tmux mode
-if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-
 function! FzyCommand(choice_command, vim_command)
   try
     let output = system(a:choice_command . " | fzy ")
@@ -78,3 +71,38 @@ nnoremap <leader>v :call FzyCommand("ag . --silent -l -g ''", ":vs")<cr>
 nnoremap <leader>s :call FzyCommand("ag . --silent -l -g ''", ":sp")<cr>
 
 set timeoutlen=1000 ttimeoutlen=0  " Eliminating delays on ESC
+
+" autocmd vimenter * NERDTree
+
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
+let NERDTreeQuitOnOpen=1
+nmap <leader>f :NERDTreeFind<cr>
+
+" shortcut for far.vim find
+nnoremap <silent> <Find-Shortcut>  :Farf<cr>
+vnoremap <silent> <Find-Shortcut>  :Farf<cr>
+
+" shortcut for far.vim replace
+nnoremap <silent> <Replace-Shortcut>  :Farr<cr>
+vnoremap <silent> <Replace-Shortcut>  :Farr<cr>
+
+" set foldmethod=expr
+"   \ foldexpr=lsp#ui#vim#folding#foldexpr()
+
+" let g:lsp_diagnostics_echo_cursor = 1
+
+" nnoremap <silent> ,<space> :LspDefinition<CR>
+" nnoremap <silent> L :LspDefinition<CR>
+" nnoremap <silent> K :LspHover<CR>
+
+let g:lsp_diagnostics_echo_cursor = 1
+let g:ale_completion_enabled = 1
+set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_tsserver_autoimport = 1
+
+nnoremap <silent> ,<space> :ALEGoToDefinition<CR>
+nnoremap <silent> L :ALEGoToDefinition<CR>
+nnoremap <silent> K :ALEHover<CR>
+nnoremap <silent> H :ALEFindReferences<CR>

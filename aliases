@@ -1,3 +1,24 @@
+alias ga="git add"
+alias gap="git add -p"
+alias gc="git commit"
+alias gca="git commit --amend"
 alias gco="git checkout"
-alias :q='exit'
-alias gs='git status'
+alias gd="git diff"
+alias gnb="git checkout -b"
+alias gps="git push"
+alias gpsh="git push -u origin `git rev-parse --abbrev-ref HEAD`"
+alias gs="git status"
+
+alias :q="exit"
+
+alias start="yarn start:dev"
+
+alias paragon="cd /Users/steven/workspace/useparagon/paragon"
+alias hermes="cd /Users/steven/workspace/useparagon/paragon/packages/hermes"
+alias rest-api="cd /Users/steven/workspace/useparagon/paragon/packages/rest-api"
+alias restapi="cd /Users/steven/workspace/useparagon/paragon/packages/rest-api"
+alias web-app="cd /Users/steven/workspace/useparagon/paragon/packages/web-app"
+alias webapp="cd /Users/steven/workspace/useparagon/paragon/packages/web-app"
+alias cerberus="cd /Users/steven/workspace/useparagon/paragon/packages/cerberus"
+alias actions="cd /Users/steven/workspace/useparagon/paragon/packages/actions"
+alias hercules="cd /Users/steven/workspace/useparagon/paragon/packages/hercules"

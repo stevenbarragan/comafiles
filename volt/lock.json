@@ -4,18 +4,23 @@
   "repos": [
     {
       "type": "git",
+      "path": "github.com/ap/vim-css-color",
+      "version": "741dd18a35e251ededc0687eea9b8d100d3b83b8"
+    },
+    {
+      "type": "git",
       "path": "github.com/ayu-theme/ayu-vim",
-      "version": "9dab20b38335ed06738f251e92e3817182063759"
+      "version": "0745635421688ce777f663d13531996cb4da6514"
     },
     {
       "type": "git",
       "path": "github.com/brooth/far.vim",
-      "version": "3c6a6a1ede26690dfaa9dd3c23929b1be6176745"
+      "version": "2a8a9c22237d224f2c24680901b61b6f9bffb061"
     },
     {
       "type": "git",
       "path": "github.com/christoomey/vim-tmux-navigator",
-      "version": "8fdf78292bb3aed1c9de880be7e03efdbf23d306"
+      "version": "44ba6fbe45895cd541ebfc87606add5c76e3829b"
     },
     {
       "type": "git",
@@ -24,8 +29,13 @@
     },
     {
       "type": "git",
+      "path": "github.com/dense-analysis/ale",
+      "version": "4f254988064d075bd3c2e08038b501df4d07b78d"
+    },
+    {
+      "type": "git",
       "path": "github.com/editorconfig/editorconfig-vim",
-      "version": "53c56fcf358ca36b00b9cbf7dd70642c8922fdd0"
+      "version": "0a3c1d8082e38a5ebadcba7bb3a608d88a9ff044"
     },
     {
       "type": "git",
@@ -35,7 +45,7 @@
     {
       "type": "git",
       "path": "github.com/itchyny/lightline.vim",
-      "version": "6daec38c1da2cbfae43d4d0d67f6a4fa7680c2b5"
+      "version": "3afa0102cede4687c05b7cb48b2e15beb236602f"
     },
     {
       "type": "git",
@@ -49,23 +59,33 @@
     },
     {
       "type": "git",
+      "path": "github.com/jiangmiao/auto-pairs",
+      "version": "39f06b873a8449af8ff6a3eee716d3da14d63a76"
+    },
+    {
+      "type": "git",
       "path": "github.com/junegunn/vim-easy-align",
       "version": "12dd6316974f71ce333e360c0260b4e1f81169c3"
     },
     {
       "type": "git",
+      "path": "github.com/liuchengxu/vim-clap",
+      "version": "42a284b52f0091bb2d5cff9590772b538bf4cc2a"
+    },
+    {
+      "type": "git",
       "path": "github.com/luochen1990/rainbow",
-      "version": "c876f4bc6e737241d53669415f88cb5f2afd8ad9"
+      "version": "4d15633cdaf61602e1d9fd216a77fc02e0881b2d"
     },
     {
       "type": "git",
       "path": "github.com/machakann/vim-highlightedyank",
-      "version": "51e25c9fa3bd2dca500ee0c910a45641d57a57fa"
+      "version": "931cc6bd53e4a1fdbe592751f0e13c0e401f0a49"
     },
     {
       "type": "git",
       "path": "github.com/mhinz/vim-signify",
-      "version": "56db16f8d3825c4d066c2faf05315c2b208cd5f5"
+      "version": "c3d450eb5f5e76d99d23b10493d4e08c5bb1ae71"
     },
     {
       "type": "git",
@@ -79,8 +99,23 @@
     },
     {
       "type": "git",
+      "path": "github.com/prabirshrestha/async.vim",
+      "version": "d15123af3483350e235397116b554cb37e705130"
+    },
+    {
+      "type": "git",
+      "path": "github.com/prabirshrestha/asyncomplete-lsp.vim",
+      "version": "86a34a86b48c50bd210a2bc006cf946d1984bc48"
+    },
+    {
+      "type": "git",
+      "path": "github.com/preservim/nerdtree",
+      "version": "d48ab70721d4f688ed34bd5939e2d6f4c89548c5"
+    },
+    {
+      "type": "git",
       "path": "github.com/rrethy/vim-illuminate",
-      "version": "4929d19cc8483d9d9872cb3669915e6a8cc381a2"
+      "version": "0778289e391c419f7a3af9de8229f798ee292013"
     },
     {
       "type": "git",
@@ -89,18 +124,33 @@
     },
     {
       "type": "git",
+      "path": "github.com/ruanyl/vim-gh-line",
+      "version": "f68bdb4f68e46a64f289c8439eb488a85d429d03"
+    },
+    {
+      "type": "git",
+      "path": "github.com/ryanoasis/vim-devicons",
+      "version": "50eb8e2d88be4e8bbcd8e5ddccbe499b3a1f473d"
+    },
+    {
+      "type": "git",
       "path": "github.com/sheerun/vim-polyglot",
-      "version": "cea0d08a062478503814e51aa21c6486a0dd1b21"
+      "version": "8b6c06e7239eb46d5b5096fd7fe9507aca88b091"
     },
     {
       "type": "git",
       "path": "github.com/terryma/vim-multiple-cursors",
-      "version": "6ab4dc7dd012e23adee74ef4596ad3e9659a20c7"
+      "version": "ec93676024590327263e8138443614ec4da8c9bc"
     },
     {
       "type": "git",
       "path": "github.com/terryma/vim-smooth-scroll",
       "version": "0eae2367c70c3415b97869346af1b5e30c123dff"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tiagofumo/vim-nerdtree-syntax-highlight",
+      "version": "c83898832738d40177ca6ccd7a69ef1db14e06b0"
     },
     {
       "type": "git",
@@ -110,7 +160,12 @@
     {
       "type": "git",
       "path": "github.com/tpope/vim-endwise",
-      "version": "bf90d8be447de667f4532b934d1a70881be56dd8"
+      "version": "97180a73ad26e1dcc1eebe8de201f7189eb08344"
+    },
+    {
+      "type": "git",
+      "path": "github.com/tpope/vim-fugitive",
+      "version": "27a5c3abd211c2784513dab4db082fa414ad0967"
     },
     {
       "type": "git",
@@ -127,28 +182,39 @@
     {
       "name": "default",
       "repos_path": [
+        "github.com/ap/vim-css-color",
         "github.com/ayu-theme/ayu-vim",
         "github.com/brooth/far.vim",
         "github.com/christoomey/vim-tmux-navigator",
         "github.com/danishprakash/vim-githubinator",
+        "github.com/dense-analysis/ale",
         "github.com/editorconfig/editorconfig-vim",
         "github.com/inside/vim-search-pulse",
         "github.com/itchyny/lightline.vim",
         "github.com/jeffkreeftmeijer/vim-dim",
         "github.com/jeffkreeftmeijer/vim-numbertoggle",
+        "github.com/jiangmiao/auto-pairs",
         "github.com/junegunn/vim-easy-align",
+        "github.com/liuchengxu/vim-clap",
         "github.com/luochen1990/rainbow",
         "github.com/machakann/vim-highlightedyank",
         "github.com/mhinz/vim-signify",
         "github.com/mikedacre/tmux-zsh-vim-titles",
         "github.com/pbrisbin/vim-colors-off",
+        "github.com/prabirshrestha/async.vim",
+        "github.com/prabirshrestha/asyncomplete-lsp.vim",
+        "github.com/preservim/nerdtree",
         "github.com/rrethy/vim-illuminate",
         "github.com/rstacruz/vim-closer",
+        "github.com/ruanyl/vim-gh-line",
+        "github.com/ryanoasis/vim-devicons",
         "github.com/sheerun/vim-polyglot",
         "github.com/terryma/vim-multiple-cursors",
         "github.com/terryma/vim-smooth-scroll",
+        "github.com/tiagofumo/vim-nerdtree-syntax-highlight",
         "github.com/tpope/vim-commentary",
         "github.com/tpope/vim-endwise",
+        "github.com/tpope/vim-fugitive",
         "github.com/tpope/vim-sensible",
         "github.com/zhaocai/GoldenView.Vim"
       ]
