@@ -3,25 +3,25 @@ window:
 
 font:
   normal:
-    family: mplus Nerd Font Mono
+    family: mplus Nerd Font
     style: regular
 
   bold:
-    family: mplus Nerd Font Mono
+    family: mplus Nerd Font
     style: bold
 
   italic:
-    family: mplus Nerd Font Mono
+    family: mplus Nerd Font
     style: thin
 
   bold_italic:
-    family: mplus Nerd Font Mono
+    family: mplus Nerd Font
     style: light
 
   size: 20.0
 
 shell:
-  program: /bin/bash
+  program: /bin/zsh
   args:
     - -l
     - -c
