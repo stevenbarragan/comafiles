@@ -33,6 +33,7 @@ ln -sF "${PWD}/gitconfig" "${HOME}/.config/git/config"
 ln -sF "${PWD}/starship.toml" "${HOME}/.config/starship.toml"
 ln -sF "${PWD}/tmux.conf" "${HOME}/.tmux.conf"
 ln -sF "${PWD}/vimrc.yaml" "${HOME}/.vimrc.yaml"
+ln -sF "${PWD}/ssh.config" "${HOME}/.ssh/config"
 
 cp mplus_1mn_nerd_font_complete.ttf /Library/Fonts
 
