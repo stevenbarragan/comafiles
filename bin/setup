@@ -1,24 +1,39 @@
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install itchyny/tap/miv
+brew install vim
+brew install alacritty
+brew instal rectangle
+brew install git
+brew install tmux
+brew install zsh
+brew install starship
+brew install the_silver_searcher
+brew install fzy
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
 if ! grep -q "${PWD}" "${HOME}/.zshrc"; then
-    echo "\nsource ${PWD}/zshrc\n" >> "${HOME}/.zshrc"
+    echo "
+source ${PWD}/zshrc" >> "${HOME}/.zshrc"
 fi
 
-mkdir -p "${HOME}/.config/git"
+if ! grep -q "${PWD}" "${HOME}/.vimrc"; then
+    echo "
+if has('vim_starting')
+  set rtp^=~/.vim/miv/miv
+endif" >> "${HOME}/.vimrc"
+fi
 
-ln -sF "${PWD}/gitconfig" "${HOME}/.config/git/config"
-ln -sF "${PWD}/tmux.conf" "${HOME}/.tmux.conf"
-
-mkdir -p "${HOME}/.config/volt/repos"
-ln -sF "${PWD}/volt/lock.json" "${HOME}/.config/volt/lock.json"
-ln -sF "${PWD}/volt/plugconf/" "${HOME}/.config/volt/plugconf"
-ln -sF "${PWD}/volt/rc/" "${HOME}/.config/volt/rc"
-
+mkdir -p "${HOME}/.config/git/"
 mkdir -p "${HOME}/.config/alacritty/"
+
 ln -sF "${PWD}/alacritty.yml" "${HOME}/.config/alacritty/alacritty.yml"
-
+ln -sF "${PWD}/gitconfig" "${HOME}/.config/git/config"
 ln -sF "${PWD}/starship.toml" "${HOME}/.config/starship.toml"
+ln -sF "${PWD}/tmux.conf" "${HOME}/.tmux.conf"
+ln -sF "${PWD}/vimrc.yaml" "${HOME}/.vimrc.yaml"
 
-# source "${HOME}/.zshrc"
-# zplg update --all
-# volt get -l -u
+cp mplus_1mn_nerd_font_complete.ttf /Library/Fonts
+
+miv update!
