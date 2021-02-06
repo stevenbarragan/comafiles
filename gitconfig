@@ -9,3 +9,5 @@
 	enabled = true
 [push]
 	default = upstream
+[pull]
+	rebase = true
