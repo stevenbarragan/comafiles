@@ -9,7 +9,7 @@ export KEYTIMEOUT=1          # By default, there is a 0.4 second delay after you
 bindkey "^?" backward-delete-char # https://github.com/denysdovhan/spaceship-prompt/issues/91#issuecomment-327996599
 
 zinit load mikedacre/tmux-zsh-vim-titles
-zinit load zdharma/fast-syntax-highlighting
+zinit light zdharma/fast-syntax-highlighting
 
 set -o vi
 export EDITOR=vim
@@ -40,13 +40,24 @@ zstyle ':completion:*' menu select # select completions with arrow keys
 zstyle ':completion:*' group-name '' # group results by category
 zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
 
-setopt hist_ignore_all_dups # remove older duplicate entries from history
-setopt hist_reduce_blanks # remove superfluous blanks from history items
-setopt inc_append_history # save history entries as soon as they are entered
-setopt share_history # share history between different instances of the shell
+## History file configuration https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/history.zsh
+[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
+[ "$HISTSIZE" -lt 50000 ] && HISTSIZE=50000
+[ "$SAVEHIST" -lt 10000 ] && SAVEHIST=10000
+
+## History command configuration
+setopt extended_history       # record timestamp of command in HISTFILE
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_all_dups   # remove older duplicate entries from history
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_reduce_blanks     # remove superfluous blanks from history items
+setopt hist_verify            # show command with history expansion to user before running it
+setopt inc_append_history     # save history entries as soon as they are entered
+setopt share_history          # share history between different instances of the shell
 
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
-zinit load zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
 
 zmodload -i zsh/complist
