@@ -6,9 +6,6 @@ export LC_CTYPE=en_US.UTF-8
 export TERM="${TERM:-"xterm-256color"}"
 export KEYTIMEOUT=1          # By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered
 
-bindkey "^?" backward-delete-char # https://github.com/denysdovhan/spaceship-prompt/issues/91#issuecomment-327996599
-
-zinit load mikedacre/tmux-zsh-vim-titles
 zinit light zdharma/fast-syntax-highlighting
 
 set -o vi
@@ -23,11 +20,9 @@ setopt correct               # CORRECT turns on spelling correction for commands
 setopt globdots              # GLOBDOTS lets files beginning with a . be matched without explicitly specifying the dot.
 setopt appendhistory         # sessions will append their history list to the history file, rather than replace it.
 
-zinit load zsh-users/zsh-history-substring-search
+zinit light zsh-users/zsh-history-substring-search
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
-
-fpath=(/usr/local/share/zsh-completions $fpath)
 
 here=$(dirname $0)
 source ${here}/aliases
@@ -62,6 +57,9 @@ bindkey '^ ' autosuggest-accept
 
 zmodload -i zsh/complist
 
-# Enable autocompletions
 autoload -Uz compinit
-compinit -i
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi

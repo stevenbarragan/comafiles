@@ -20,7 +20,6 @@ plugin:
       let g:rainbow_active = 1
   machakann/vim-highlightedyank: {}
   mhinz/vim-signify: {}
-  mikedacre/tmux-zsh-vim-titles: {}
   pbrisbin/vim-colors-off: {}
   psliwka/vim-smoothie:
     before: |
