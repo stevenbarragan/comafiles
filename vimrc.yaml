@@ -137,3 +137,7 @@ after: |
   nnoremap <silent> L :ALEGoToDefinition<CR>
   nnoremap <silent> K :ALEHover<CR>
   nnoremap <silent> H :ALEFindReferences<CR>
+
+  " Persistent undo even after closing vim session
+  set undodir=~/.vim/undo-dir
+  set undofile

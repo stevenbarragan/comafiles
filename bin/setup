@@ -27,6 +27,8 @@ fi
 
 mkdir -p "${HOME}/.config/git/"
 mkdir -p "${HOME}/.config/alacritty/"
+mkdir -p "${HOME}/.config/git/"
+mkdir -p "${HOME}/.vim/undo-dir/"
 
 ln -sF "${PWD}/alacritty.yml" "${HOME}/.config/alacritty/alacritty.yml"
 ln -sF "${PWD}/gitconfig" "${HOME}/.config/git/config"
