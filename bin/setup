@@ -11,8 +11,6 @@ brew install starship
 brew install the_silver_searcher
 brew install fzy
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
-
 if ! grep -q "${PWD}" "${HOME}/.zshrc"; then
     echo "
 source ${PWD}/zshrc" >> "${HOME}/.zshrc"
@@ -25,7 +23,9 @@ if has('vim_starting')
 endif" >> "${HOME}/.vimrc"
 fi
 
-mkdir -p "${HOME}/.config/git/"
+mkdir -p "$HOME/.zinit" && chmod g-rwX "$HOME/.zinit"
+git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin"
+
 mkdir -p "${HOME}/.config/alacritty/"
 mkdir -p "${HOME}/.config/git/"
 mkdir -p "${HOME}/.vim/undo-dir/"

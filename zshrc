@@ -1,3 +1,5 @@
+source ~/.zinit/bin/zinit.zsh
+
 eval "$(starship init zsh)"
 
 # https://github.com/sindresorhus/pure/issues/39#issuecomment-386371357
