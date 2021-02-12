@@ -12,7 +12,6 @@ plugin:
   itchyny/lightline.vim: {}
   jeffkreeftmeijer/vim-dim: {}
   jeffkreeftmeijer/vim-numbertoggle: {}
-  jiangmiao/auto-pairs: {}
   junegunn/vim-easy-align: {}
   liuchengxu/vim-clap: {}
   luochen1990/rainbow:
@@ -21,9 +20,6 @@ plugin:
   machakann/vim-highlightedyank: {}
   mhinz/vim-signify: {}
   pbrisbin/vim-colors-off: {}
-  psliwka/vim-smoothie:
-    before: |
-      let g:smoothie_experimental_mappings = 1
   prabirshrestha/async.vim: {}
   prabirshrestha/asyncomplete-lsp.vim: {}
   preservim/nerdtree: {}
@@ -113,6 +109,8 @@ after: |
   nnoremap <leader>e :call FzyCommand("ag . --silent -l -g ''", ":e")<cr>
   nnoremap <leader>v :call FzyCommand("ag . --silent -l -g ''", ":vs")<cr>
   nnoremap <leader>s :call FzyCommand("ag . --silent -l -g ''", ":sp")<cr>
+
+  nnoremap <leader>t :Clap files<cr>
 
   set timeoutlen=1000 ttimeoutlen=0  " Eliminating delays on ESC
 
