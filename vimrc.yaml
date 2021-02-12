@@ -17,6 +17,8 @@ plugin:
     build: |
       cd "$(miv path clap)"
       cargo build --release
+    before: |
+      let g:clap_layout = { 'relative': 'editor', 'width': '90%', 'row': '10%', 'col': '0%' }
   luochen1990/rainbow:
     before: |
       let g:rainbow_active = 1
