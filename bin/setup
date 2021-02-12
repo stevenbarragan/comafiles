@@ -1,15 +1,16 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install itchyny/tap/miv
-brew install vim
+brew install rectangle
 brew install alacritty
-brew instal rectangle
+brew install fzy
 brew install git
-brew install tmux
-brew install zsh
+brew install itchyny/tap/miv
+brew install rust
 brew install starship
 brew install the_silver_searcher
-brew install fzy
+brew install tmux
+brew install vim
+brew install zsh
 
 if ! grep -q "${PWD}" "${HOME}/.zshrc"; then
     echo "
@@ -41,3 +42,6 @@ ln -sF "${PWD}/zlogin" "${HOME}/.zlogin"
 cp mplus_1mn_nerd_font_complete.ttf /Library/Fonts
 
 miv update!
+
+cd "$(miv path clap)"
+cargo build --release
