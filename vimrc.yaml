@@ -16,7 +16,7 @@ plugin:
   liuchengxu/vim-clap:
     build: |
       cd "$(miv path clap)"
-      cargo build --release
+      ./install.sh
     before: |
       let g:clap_layout = { 'relative': 'editor', 'width': '90%', 'row': '10%', 'col': '0%' }
   luochen1990/rainbow:
@@ -99,6 +99,7 @@ after: |
   " Start interactive EasyAlign for a motion/text object (e.g. gaip)
   nmap ga <Plug>(EasyAlign)
 
+  " remove if staying with vim-clap
   function! FzyCommand(choice_command, vim_command)
     try
       let output = system(a:choice_command . " | fzy ")
