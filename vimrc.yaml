@@ -13,7 +13,10 @@ plugin:
   jeffkreeftmeijer/vim-dim: {}
   jeffkreeftmeijer/vim-numbertoggle: {}
   junegunn/vim-easy-align: {}
-  liuchengxu/vim-clap: {}
+  liuchengxu/vim-clap:
+    build: |
+      cd "$(miv path clap)"
+      cargo build --release
   luochen1990/rainbow:
     before: |
       let g:rainbow_active = 1

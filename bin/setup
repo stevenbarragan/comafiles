@@ -42,6 +42,3 @@ ln -sF "${PWD}/zlogin" "${HOME}/.zlogin"
 cp mplus_1mn_nerd_font_complete.ttf /Library/Fonts
 
 miv update!
-
-cd "$(miv path clap)"
-cargo build --release
