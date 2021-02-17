@@ -18,7 +18,8 @@ plugin:
       cd "$(miv path clap)"
       bash install.sh
     before: |
-      let g:clap_layout = { 'relative': 'editor', 'width': '90%', 'row': '10%', 'col': '0%' }
+      let g:clap_layout = {'col': '0%', 'relative': 'editor', 'row': '10%', 'width': '90%'}
+      let g:clap_preview_direction = 'UD'
   luochen1990/rainbow:
     before: |
       let g:rainbow_active = 1
