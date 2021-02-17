@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 source ~/.zinit/bin/zinit.zsh
 
 eval "$(starship init zsh)"
