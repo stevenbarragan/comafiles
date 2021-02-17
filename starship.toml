@@ -45,15 +45,15 @@ symbol = " "
 symbol = " "
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '([$all_status$ahead_behind]($style) )'
 style = "bold yellow"
-conflicted = "🏳"
-ahead = "🤠"
-behind = "😰"
-diverged = "😳"
-untracked = "🤔"
-stashed = "🤨"
-modified = "🧐"
-staged = '[++\($count\)](green)'
-renamed = "😬"
-deleted = "😵"
+conflicted = "[conflict](red)"
+ahead = "[ahead](green)"
+behind = "[behind](red)"
+diverged = "diverged"
+untracked = "[untracked](white)"
+stashed = "[stashed ](yellow)"
+modified = 'modified '
+staged = '[staged](blue) '
+renamed = "renamed"
+deleted = "deleted"
