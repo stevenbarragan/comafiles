@@ -56,6 +56,8 @@ setopt inc_append_history     # save history entries as soon as they are entered
 setopt share_history          # share history between different instances of the shell
 
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
+export ZSH_AUTOSUGGEST_HISTORY_IGNORE="cd *"
+export ZSH_AUTOSUGGEST_COMPLETION_IGNORE="git *"
 zinit light zsh-users/zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
 
