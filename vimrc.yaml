@@ -9,7 +9,9 @@ plugin:
   dense-analysis/ale: {}
   editorconfig/editorconfig-vim: {}
   inside/vim-search-pulse: {}
-  itchyny/lightline.vim: {}
+  vim-airline/vim-airline:
+    script: |
+      let g:airline#extensions#ale#enabled = 1
   jeffkreeftmeijer/vim-dim: {}
   jeffkreeftmeijer/vim-numbertoggle: {}
   junegunn/vim-easy-align: {}
@@ -26,8 +28,6 @@ plugin:
   machakann/vim-highlightedyank: {}
   mhinz/vim-signify: {}
   pbrisbin/vim-colors-off: {}
-  prabirshrestha/async.vim: {}
-  prabirshrestha/asyncomplete-lsp.vim: {}
   preservim/nerdtree: {}
   rrethy/vim-illuminate: {}
   rstacruz/vim-closer: {}
