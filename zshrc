@@ -69,3 +69,6 @@ if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
 else
   compinit -C
 fi
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
