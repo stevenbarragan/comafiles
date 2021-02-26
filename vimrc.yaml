@@ -11,10 +11,11 @@ plugin:
   inside/vim-search-pulse: {}
   vim-airline/vim-airline:
     script: |
+      let g:airline#extensions#default#layout = [['a', 'c'], ['warning', 'error', 'z']] " Hide branch, filetype and file encoding
+      let g:airline_powerline_fonts = 1
+      let g:airline_skip_empty_sections = 1
+
       let g:airline#extensions#ale#enabled = 1 " Enable Ale extension
-      let g:airline_section_b = ''             " do not display branch
-      let g:airline_section_x = ''             " do not display filetype
-      let g:airline_section_y = ''             " do not display file encoding
   jeffkreeftmeijer/vim-dim: {}
   jeffkreeftmeijer/vim-numbertoggle: {}
   junegunn/vim-easy-align: {}
