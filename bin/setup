@@ -42,12 +42,14 @@ mkdir -p "${HOME}/.config/git/"
 mkdir -p "${HOME}/.vim/undo-dir/"
 
 ln -sF "${PWD}/alacritty.yml" "${HOME}/.config/alacritty/alacritty.yml"
-ln -sF "${PWD}/gitconfig" "${HOME}/.config/git/config"
+ln -sF "${PWD}/gitconfig"     "${HOME}/.config/git/config"
 ln -sF "${PWD}/starship.toml" "${HOME}/.config/starship.toml"
-ln -sF "${PWD}/tmux.conf" "${HOME}/.tmux.conf"
-ln -sF "${PWD}/vimrc.yaml" "${HOME}/.vimrc.yaml"
-ln -sF "${PWD}/ssh.config" "${HOME}/.ssh/config"
-ln -sF "${PWD}/zlogin" "${HOME}/.zlogin"
+ln -sF "${PWD}/tmux.conf"     "${HOME}/.tmux.conf"
+ln -sF "${PWD}/vimrc.yaml"    "${HOME}/.vimrc.yaml"
+ln -sF "${PWD}/ssh.config"    "${HOME}/.ssh/config"
+ln -sF "${PWD}/zlogin"        "${HOME}/.zlogin"
+
+touch "${HOME}/.gitconfig" # for global configurations like user
 
 cp mplus_1mn_nerd_font_complete.ttf /Library/Fonts
 
