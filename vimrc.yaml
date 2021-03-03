@@ -28,10 +28,7 @@ plugin:
   luochen1990/rainbow:
     before: |
       let g:rainbow_active = 1
-  luxed/ayu-vim:
-      after: |
-        set background=dark
-        colorscheme ayu
+  luxed/ayu-vim: {}
   machakann/vim-highlightedyank: {}
   mhinz/vim-signify: {}
   pbrisbin/vim-colors-off: {}
@@ -59,6 +56,11 @@ after: |
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
   syntax enable
+
+  set background=dark
+  colorscheme ayu
+
+  highlight clear SignColumn
 
   " ================ General Config ====================
 
