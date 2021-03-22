@@ -21,9 +21,8 @@ font:
   size: 20.0
 
 shell:
-  program: /bin/zsh
+  program: /usr/local/bin/nu
   args:
-    - -l
     - -c
     - "tmux attach || tmux"
 

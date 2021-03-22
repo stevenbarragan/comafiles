@@ -1,0 +1,21 @@
+path = ["/usr/local/bin", "/usr/bin", "/bin", "/usr/sbin", "/sbin", "~/.cargo/bin"]
+prompt = "starship prompt"
+skip_welcome_message = true
+startup = [
+	"alias gs = git status",
+	"alias gap = git add -p",
+	"alias gc = git commit",
+	"alias gca = git commit --amend",
+	"alias gco = git checkout",
+	"alias gd = git diff",
+	"alias gnb = git checkout -b",
+	"alias gps = git push",
+	"alias gpsh = git push",
+	"alias gs = git status",
+]
+
+[env]
+SHELL = "/bin/zsh"
+
+[line_editor]
+edit_mode = "vi"

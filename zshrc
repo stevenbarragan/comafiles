@@ -2,8 +2,6 @@
 
 source ~/.zinit/bin/zinit.zsh
 
-eval "$(starship init zsh)"
-
 # https://github.com/sindresorhus/pure/issues/39#issuecomment-386371357
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
