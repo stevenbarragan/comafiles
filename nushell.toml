@@ -12,6 +12,7 @@ startup = [
 	"alias gps = git push",
 	"alias gpsh = git push",
 	"alias gs = git status",
+	"alias :q = exit",
 ]
 
 [env]
