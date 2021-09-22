@@ -2,8 +2,9 @@
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+brew install anki
 brew install alacritty
-brew install fzy
+brew install sk
 brew install git
 brew install itchyny/tap/miv
 brew install rectangle
@@ -15,13 +16,15 @@ brew install vim
 brew install zsh
 brew install --cask firefox
 brew install nushell
+brew install fnm # node version manager
 
 brew tap dwarvesf/homebrew-tap
 brew install vimmotion
 
+cargo install git-cliff
+
 # ruby stuff
-brew install chruby
-brew install ruby-install
+brew install rbenv
 
 if ! grep -q "${PWD}" "${HOME}/.zshrc"; then
     echo "
