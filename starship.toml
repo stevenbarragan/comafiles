@@ -12,7 +12,7 @@ discharging_symbol = " "
 symbol = " "
 
 [git_branch]
-symbol = " "
+symbol = "branch "
 
 [golang]
 symbol = " "
@@ -45,15 +45,15 @@ symbol = " "
 symbol = " "
 
 [git_status]
-format = '([$all_status$ahead_behind]($style) )'
-style = "bold yellow"
+format     = '([$all_status$ahead_behind]($style) )'
+style      = "bold yellow"
 conflicted = "[conflict](red)"
-ahead = "[ahead](green)"
-behind = "[behind](red)"
-diverged = "diverged"
-untracked = "[untracked ](white)"
-stashed = "[stashed ](yellow)"
-modified = 'modified '
-staged = '[staged](blue) '
-renamed = "renamed"
-deleted = "deleted"
+ahead      = "[ahead](green)"
+behind     = "[behind](red)"
+diverged   = "diverged"
+untracked  = "[untracked ](white)"
+stashed    = "[stashed ](yellow)"
+modified   = 'modified '
+staged     = '[staged](blue) '
+renamed    = "renamed"
+deleted    = "deleted "

@@ -27,7 +27,8 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 here=$(dirname $0)
-source ${here}/aliases
+source ${here}/zsh/aliases
+source ${here}/zsh/dotenv.zsh
 
 setopt auto_list # automatically list choices on ambiguous completion
 setopt auto_menu # automatically use menu completion
@@ -68,5 +69,9 @@ else
   compinit -C
 fi
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+export NVM_LAZY_LOAD=true
+zinit light lukechilds/zsh-nvm
+
+eval "$(rbenv init -)"
+
+eval "$(starship init zsh)"

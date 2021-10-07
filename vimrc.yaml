@@ -71,6 +71,8 @@ after: |
   set noshowmode
   set nowrap
 
+  set tabstop=2 shiftwidth=2 expandtab
+
   " This makes vim act like all other editors, buffers can
   " exist in the background without being in a window.
   " http://items.sjbach.com/319/configuring-vim-right
@@ -106,24 +108,8 @@ after: |
   " Start interactive EasyAlign for a motion/text object (e.g. gaip)
   nmap ga <Plug>(EasyAlign)
 
-  " remove if staying with vim-clap
-  function! FzyCommand(choice_command, vim_command)
-    try
-      let output = system(a:choice_command . " | fzy ")
-    catch /Vim:Interrupt/
-      " Swallow errors from ^C, allow redraw! below
-    endtry
-    redraw!
-    if v:shell_error == 0 && !empty(output)
-      exec a:vim_command . ' ' . output
-    endif
-  endfunction
-
-  nnoremap <leader>e :call FzyCommand("ag . --silent -l -g ''", ":e")<cr>
-  nnoremap <leader>v :call FzyCommand("ag . --silent -l -g ''", ":vs")<cr>
-  nnoremap <leader>s :call FzyCommand("ag . --silent -l -g ''", ":sp")<cr>
-
   nnoremap <leader>t :Clap files<cr>
+  nnoremap <leader>s :Clap grep2<cr>
 
   set timeoutlen=1000 ttimeoutlen=0  " Eliminating delays on ESC
 

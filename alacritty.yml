@@ -12,17 +12,18 @@ font:
 
   italic:
     family: mplus Nerd Font
-    style: thin
+    style: light
 
   bold_italic:
     family: mplus Nerd Font
-    style: light
+    style: thin
 
   size: 20.0
 
 shell:
-  program: /usr/local/bin/nu
+  program: /bin/zsh
   args:
+    - -l
     - -c
     - "tmux attach || tmux"
 
