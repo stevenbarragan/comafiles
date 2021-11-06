@@ -11,3 +11,9 @@
 	default = upstream
 [pull]
 	rebase = true
+[diff]
+	tool = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difftastic "$LOCAL" "$REMOTE"

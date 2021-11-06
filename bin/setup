@@ -23,6 +23,8 @@ brew install vimmotion
 
 cargo install git-cliff
 
+cargo install difftastic
+
 # ruby stuff
 brew install rbenv
 
