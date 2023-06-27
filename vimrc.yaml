@@ -1,35 +1,54 @@
 plugin:
+  ap/vim-css-color: {}
   brooth/far.vim: {}
+  EdenEast/nightfox.nvim:
+    after:
+      colorscheme nightfox
   christoomey/vim-tmux-navigator:
     before: |
       let g:tmux_navigator_save_on_switch = 2
       let g:tmux_navigator_disable_when_zoomed = 1
   danishprakash/vim-githubinator: {}
-  dense-analysis/ale: {}
+  dense-analysis/ale: 
+    before: |
+      let g:ale_completion_enabled = 1
+      set omnifunc=ale#completion#OmniFunc
+      let g:ale_completion_autoimport = 1
+
+      nnoremap <silent> ,<space> :ALEGoToDefinition<CR>
+      nnoremap <silent> L :ALEGoToDefinition<CR>
+      nnoremap <silent> K :ALEHover<CR>
+      nnoremap <silent> H :ALEFindReferences<CR>
+
+      let g:ale_ruby_rubocop_executable = 'bin/rubocop'
+  prabirshrestha/vim-lsp: {}
+  mattn/vim-lsp-settings: {}
+  rhysd/vim-lsp-ale: {}
   editorconfig/editorconfig-vim: {}
   inside/vim-search-pulse: {}
-  vim-airline/vim-airline:
-    script: |
-      let g:airline#extensions#default#layout = [['a', 'c'], ['warning', 'error', 'z']] " Hide branch, filetype and file encoding
-      let g:airline_powerline_fonts = 1
-      let g:airline_skip_empty_sections = 1
-
-      let g:airline#extensions#ale#enabled = 1 " Enable Ale extension
+  ourigen/skyline.vim:
+    before: |
+      " let g:skyline_ale = 1
+      let g:skyline_bufnum = 0
+      let g:skyline_encoding = 0
+      let g:skyline_fileformat = 0
+      let g:skyline_percent = 0
+      let g:skyline_wordcount = 1
   jeffkreeftmeijer/vim-dim: {}
   jeffkreeftmeijer/vim-numbertoggle: {}
   junegunn/vim-easy-align: {}
+  gmarmstrong/vim-muse: {}
+  karamcc/vim-gemini: {}
   liuchengxu/vim-clap:
     build: |
       cd "$(miv path clap)"
-      bash install.sh
-    before: |
-      let g:clap_layout = {'col': '0%', 'relative': 'editor', 'row': '10%', 'width': '90%'}
-      let g:clap_preview_direction = 'UD'
+      ./install.sh
+  lotabout/skim: {}
   luochen1990/rainbow:
     before: |
       let g:rainbow_active = 1
-  luxed/ayu-vim: {}
   machakann/vim-highlightedyank: {}
+  mikedacre/tmux-zsh-vim-titles: {}
   mhinz/vim-signify: {}
   pbrisbin/vim-colors-off: {}
   preservim/nerdtree: {}
@@ -38,8 +57,9 @@ plugin:
   ruanyl/vim-gh-line: {}
   ryanoasis/vim-devicons: {}
   sheerun/vim-polyglot: {}
-  terryma/vim-multiple-cursors: {}
+  tpope/vim-rails: {}
   tiagofumo/vim-nerdtree-syntax-highlight: {}
+  hashivim/vim-terraform: {}
   tpope/vim-commentary: {}
   tpope/vim-endwise: {}
   tpope/vim-fugitive: {}
@@ -57,11 +77,6 @@ after: |
 
   syntax enable
 
-  set background=dark
-  colorscheme ayu
-
-  highlight clear SignColumn
-
   " ================ General Config ====================
 
   set relativenumber
@@ -71,7 +86,7 @@ after: |
   set noshowmode
   set nowrap
 
-  set tabstop=2 shiftwidth=2 expandtab
+  set autoindent expandtab tabstop=2 shiftwidth=2
 
   " This makes vim act like all other editors, buffers can
   " exist in the background without being in a window.
@@ -109,7 +124,7 @@ after: |
   nmap ga <Plug>(EasyAlign)
 
   nnoremap <leader>t :Clap files<cr>
-  nnoremap <leader>s :Clap grep2<cr>
+  nnoremap <leader>s :Clap grep<cr>
 
   set timeoutlen=1000 ttimeoutlen=0  " Eliminating delays on ESC
 
@@ -123,16 +138,6 @@ after: |
   " shortcut for far.vim replace
   nnoremap <silent> <Replace-Shortcut>  :Farr<cr>
   vnoremap <silent> <Replace-Shortcut>  :Farr<cr>
-
-  let g:lsp_diagnostics_echo_cursor = 1
-  let g:ale_completion_enabled = 1
-  set omnifunc=ale#completion#OmniFunc
-  let g:ale_completion_tsserver_autoimport = 1
-
-  nnoremap <silent> ,<space> :ALEGoToDefinition<CR>
-  nnoremap <silent> L :ALEGoToDefinition<CR>
-  nnoremap <silent> K :ALEHover<CR>
-  nnoremap <silent> H :ALEFindReferences<CR>
 
   " Persistent undo even after closing vim session
   set undodir=~/.vim/undo-dir
