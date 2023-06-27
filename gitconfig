@@ -12,4 +12,9 @@
 [pull]
 	rebase = true
 [diff]
+	tool = difftastic
 	external = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difftastic "$LOCAL" "$REMOTE"
