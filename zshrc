@@ -8,7 +8,7 @@ export LC_CTYPE=en_US.UTF-8
 export TERM="${TERM:-"xterm-256color"}"
 export KEYTIMEOUT=1          # By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered
 
-zinit light zdharma/fast-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 set -o vi
 export EDITOR=vim
@@ -72,6 +72,11 @@ fi
 export NVM_LAZY_LOAD=true
 zinit light lukechilds/zsh-nvm
 
-eval "$(rbenv init -)"
+zinit light mikedacre/tmux-zsh-vim-titles
+
+eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
+
+eval "$(frum init)"
 
 eval "$(starship init zsh)"
