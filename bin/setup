@@ -18,8 +18,8 @@ brew install bandwhich
 brew install zoxide
 brew install zsh
 brew install --cask firefox
-brew install fnm       # node version manager
 brew install difftastic
+brew install rtx
 
 brew tap dwarvesf/homebrew-tap
 brew install vimmotion

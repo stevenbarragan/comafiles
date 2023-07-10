@@ -69,14 +69,9 @@ else
   compinit -C
 fi
 
-export NVM_LAZY_LOAD=true
-zinit light lukechilds/zsh-nvm
-
 zinit light mikedacre/tmux-zsh-vim-titles
 
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
-
-eval "$(frum init)"
-
+eval "$(rtx activate zsh)"
 eval "$(starship init zsh)"
