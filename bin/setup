@@ -55,6 +55,7 @@ ln -sF "${PWD}/vimrc.yaml"    "${HOME}/.vimrc.yaml"
 ln -sF "${PWD}/ssh.config"    "${HOME}/.ssh/config"
 ln -sF "${PWD}/zlogin"        "${HOME}/.zlogin"
 ln -sf "${PWD}/nushell.toml" "$(nu -c "config path" )"
+ln -sF "${PWD}/atuin.toml" "${HOME}/.config/atuin/config.toml"
 
 touch "${HOME}/.gitconfig" # for global configurations like user
 
