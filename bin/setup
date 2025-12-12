@@ -6,7 +6,9 @@ brew install atuin     # Magical shell history
 brew install alacritty
 brew install sk
 brew install git
+brew install --cask ghostty
 brew install itchyny/tap/miv
+brew install mise
 brew install rectangle
 brew install ripgrep
 brew install rustup
@@ -19,14 +21,9 @@ brew install zoxide
 brew install zsh
 brew install --cask firefox
 brew install difftastic
-brew install rtx
 
 brew tap dwarvesf/homebrew-tap
 brew install vimmotion
-
-
-# ruby stuff
-brew install rbenv
 
 if ! grep -q "${PWD}" "${HOME}/.zshrc"; then
     echo "
@@ -54,8 +51,9 @@ ln -sF "${PWD}/tmux.conf"     "${HOME}/.tmux.conf"
 ln -sF "${PWD}/vimrc.yaml"    "${HOME}/.vimrc.yaml"
 ln -sF "${PWD}/ssh.config"    "${HOME}/.ssh/config"
 ln -sF "${PWD}/zlogin"        "${HOME}/.zlogin"
-ln -sf "${PWD}/nushell.toml" "$(nu -c "config path" )"
-ln -sF "${PWD}/atuin.toml" "${HOME}/.config/atuin/config.toml"
+ln -sf "${PWD}/nushell.toml"  "$(nu -c "config path" )"
+ln -sF "${PWD}/atuin.toml"    "${HOME}/.config/atuin/config.toml"
+ln -sF "${PWD}/ghostty.toml"  "${HOME}/.config/ghostty/config.toml"
 
 touch "${HOME}/.gitconfig" # for global configurations like user
 
