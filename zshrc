@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-source ~/.zinit/bin/zinit.zsh
+source ~/.zinit/bin/zi.zsh
 
 # https://github.com/sindresorhus/pure/issues/39#issuecomment-386371357
 export LANG=en_US.UTF-8
@@ -9,6 +9,8 @@ export TERM="${TERM:-"xterm-256color"}"
 export KEYTIMEOUT=1          # By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered
 
 zinit light zdharma-continuum/fast-syntax-highlighting
+
+bindkey -v
 
 set -o vi
 export EDITOR=vim
@@ -28,7 +30,8 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 here=$(dirname $0)
 source ${here}/zsh/aliases
-source ${here}/zsh/dotenv.zsh
+
+# source ${here}/zsh/dotenv.zsh # Disable custom dotenv plugin
 
 setopt auto_list # automatically list choices on ambiguous completion
 setopt auto_menu # automatically use menu completion
@@ -71,7 +74,7 @@ fi
 
 zinit light mikedacre/tmux-zsh-vim-titles
 
-eval "$(zoxide init zsh)"
-eval "$(atuin init zsh)"
-eval "$(rtx activate zsh)"
+eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
+eval "$(zoxide init zsh)"

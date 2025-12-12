@@ -38,7 +38,7 @@ endif" >> "${HOME}/.vimrc"
 fi
 
 mkdir -p "$HOME/.zinit" && chmod g-rwX "$HOME/.zinit"
-git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin"
+git clone https://github.com/zdharma-continuum/zinit "$HOME/.zinit/bin"
 
 mkdir -p "${HOME}/.config/alacritty/"
 mkdir -p "${HOME}/.config/git/"
