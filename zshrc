@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
-source ~/.zinit/bin/zi.zsh
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
 
 # https://github.com/sindresorhus/pure/issues/39#issuecomment-386371357
 export LANG=en_US.UTF-8
